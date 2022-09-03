@@ -1,0 +1,175 @@
+/******** GOOGLE FONTS *********/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+/******** COLORS ROOT *********/
+:root{
+    --primary-color: #d62828;
+    --secondary-color: #f77f00;
+    --primary-bck-color: #03045e;
+    --secondary-bck-color: #8d99ae;
+}
+/******** RESET PAGE *********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+/******** BODY *********/
+body{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 100%);
+}
+/******** BODY *********/
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content div{
+
+    display: flex;
+    gap: 20px;
+}
+
+.content h1{
+
+    background: linear-gradient(90deg, #ff6f00 0%, #fe00f8 100%);
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content h1 b{
+
+    margin: 0px 10px;
+}
+/****** BUTTON MODAL ******/
+button {
+
+    margin-top: 40px;
+    padding: 17px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+    background: #f4f4f4;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+}
+
+button:hover {
+
+    letter-spacing: 3px;
+    background-color: #f77f00;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #f77f0090 0px 7px 20px 0px;
+}
+
+button:active {
+
+    letter-spacing: 3px;
+    background-color: #f77f00;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #f77f00 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+
+
+.modal{
+
+    width: 600px;
+    height: 600px;
+    background-color:#cfcfcf;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    animation: animate;
+    animation-duration: 500ms;
+    box-shadow: 0px 0px 30px 10px #000;
+}
+
+.modal button{
+
+    position: absolute;
+    margin: 0px;
+    width: 70px;
+    height: 70px;
+    right: 0px;
+    top: 0px;
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    
+}
+
+.modal section{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal section h1{
+
+    width: 80%;
+    font-size: 3rem;
+}
+
+.modal section p{
+
+    width: 80%;
+    font-size: 1.3rem;
+}
+
+@keyframes animate{
+
+    from{
+
+        position: absolute;
+        top: 0px;
+        opacity: 1;
+    }
+
+    from{
+        
+        opacity: 0;
+    }
+}
+
+
+.fechar{
+
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+}
